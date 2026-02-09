@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;   
+}
+
+body{
+    min-height: 100vh;
+    background: #1e1e1e;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+nav{
+    background-color: rgb(212, 138, 0);
+    background: linear-gradient(90deg, rgb(212,138,0), rgb(255,170,0));
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    top: 0;
+}
+#Navbar{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+nav li{
+    height: 100px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(60, 60, 60);
+    font-size: larger;
+    font-weight: 500;
+    border-radius: 40px;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+nav a:hover{
+    background-color: rgb(157, 102, 0);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+nav a.active{
+    background-color: black;
+    color: white;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.409);
+    backdrop-filter: blur(10px);
+    box-shadow: -5px 0 10px rgb(34, 34, 34);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+
+.sidebar li{
+    width: 100%;
+    font-size: 20px;
+}
+
+#ShowSidebar{
+    display: none;
+}
+#ShowSbPicture{
+    width: 40px;
+}
+
+#LogoImage{
+    width: 200px;
+    height: 100px;
+}
+#CloseSbPicture{
+    width: 40px;
+    height: 35px;
+}
+
+.BackgroundPicture{
+    max-width: 100%;
+    height: 300px;
+    background: url(https://img.freepik.com/free-photo/laptop-office-plant-black-background-top-view_169016-34505.jpg?semt=ais_hybrid&w=740);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90% 0%;
+    margin-bottom: 20px;
+}
+
+.WelcomeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcomeSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Introduction{
+    font-size: 50px;
+    color: rgb(212, 138, 0);
+    background-color: rgba(212, 138, 0, 0.173);
+    font-style: italic;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.AboutMe{
+    font-size: 45px;
+    color: rgb(212, 138, 0);
+    background-color: rgba(212, 138, 0, 0.173);
+    font-style: italic;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.knowledgeContainer{
+    width: 100%;
+    height: auto;
+    background-color: rgba(200, 200, 200, 0.173);
+    backdrop-filter: blur(1px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.HeaderKnowledge{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(200, 200, 200, 0.173);
+    font-style: italic;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.AllKnowledgeContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.HtmlCssContainer {
+    width: 280px;
+    height: 320px;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 20px;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.29);
+    transition: 0.4s;
+}
+
+.HtmlCssContainer:hover {
+    transform: translateY(-5px);
+}
+
+.HtmlCssPictures {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.HtmlCssPictures img {
+    width: 150px;
+    height: 110px;
+    border-radius: 10px; 
+    transition: transform 0.2s ease;
+}
+
+.HtmlCssContainer:hover .HtmlCssPictures img {
+    transform: scale(1.05); 
+}
+
+.ContainerInformation {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    background-color: #f7700f;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+}
+
+.HtmlCssContainer:hover .ContainerInformation {
+    background-color: #ff8800; 
+}
+
+.ContainerInformation p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.JavascriptContainer{
+    width: 280px;
+    height: 320px;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 20px;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.29);
+    transition: 0.4s;   
+}
+
+.JavascriptContainer:hover {
+    transform: translateY(-5px);
+}
+
+.JavascriptContainer:hover .JsContainerInformation {
+    background-color: #eebf00; 
+}
+
+.JsContainerInformation {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    background-color: #daae00;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+.ChessContainer{
+    width: 280px;
+    height: 320px;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 20px;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.29);
+    transition: 0.4s;
+}
+
+.ChessContainerInformation {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    background-color: #006f04;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.ChessContainer:hover {
+    transform: translateY(-5px);
+}
+
+.ChessContainer:hover .ChessContainerInformation {
+    background-color: #009118; 
+}
+
+.projectHeader{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(200, 200, 200, 0.173);
+    font-style: italic;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.projectsContainer{
+    width: 100%;
+    height: auto; 
+    background-color: rgba(92, 92, 92, 0.479);
+    backdrop-filter: blur(1px);
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.Projects{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.project{
+    width: 310px;
+    height: 360px;
+    border: white solid;
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.29);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.4s;
+}
+.project:hover{
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+.projectPicture{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+.projectPicture img{
+    width: 100%;
+}
+.projectIntormation{
+    width: 100%;
+    height: 40%;
+    background-color: rgb(95, 95, 95);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+}
+.projectIntormation h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    color: rgb(43, 43, 43);
+}
+.projectIntormation a{
+    width: 80%;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #2e2e2e7f;
+    text-decoration: none;
+    color: black;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projectIntormation a:hover{
+    transition: 0.3s;
+    background-color: #2e2e2ebd;
+}
+
+.footerContainer{
+    width: 100%;
+    margin-top: 100px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(255,170,0);
+}
+.footerContainer img{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.footerContainer img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.contactContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#GithubLogo{
+    background-color: white;
+    border-radius: 100%;
+}
+
+@media (max-width: 840px){
+    #ShowSidebar{
+        display: flex;
+    }
+    .ListItems{
+        display: none;
+    }
+}
+
+
